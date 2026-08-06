@@ -1,6 +1,6 @@
 # LLM Orchestration & Schema Validation
 
-This folder contains notebooks and materials to get comfortable with **LLM Orchestration** (using LangChain) and **Schema Validation / Structured Outputs** (using Pydantic).
+This folder contains notebooks and materials to get comfortable with **LLM Orchestration** (using LangChain) and **Schema Validation / Structured Outputs** (using Pydantic), powered by **Gemini**.
 
 ## Learning Objectives
 1. Understand how to orchestrate LLM workflows using LangChain's Expression Language (LCEL).
@@ -14,6 +14,6 @@ This folder contains notebooks and materials to get comfortable with **LLM Orche
 ## Prerequisites
 To run these notebooks, you will need to install the following dependencies:
 ```bash
-pip install langchain langchain-openai pydantic jupyter
+pip install langchain langchain-google-genai pydantic python-dotenv jupyter
 ```
-You will also need to set up your LLM provider API key (e.g., `OPENAI_API_KEY`).
+You will also need to set up your Gemini API key as an environment variable (`GOOGLE_API_KEY`).
