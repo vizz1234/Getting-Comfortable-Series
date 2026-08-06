@@ -8,8 +8,9 @@ This folder contains notebooks and materials to get comfortable with **LLM Orche
 3. Combine both to guarantee that LLM outputs conform to a specific, validated structure.
 
 ## Structure
-* [01_orchestration.ipynb](file:///Users/vizzdd/Documents/Getting%20Comfortable%20Series/llm-orchestration-schema-validation/01_orchestration.ipynb): Focuses on the basics of LangChain, prompt templates, models, and chaining.
-* [02_validation.ipynb](file:///Users/vizzdd/Documents/Getting%20Comfortable%20Series/llm-orchestration-schema-validation/02_validation.ipynb): Focuses on Pydantic schema validation and parsing structured outputs from LLMs.
+* [01_intro_to_langchain.ipynb](file:///Users/vizzdd/Documents/Getting%20Comfortable%20Series/llm-orchestration-schema-validation/01_intro_to_langchain.ipynb): Direct SDK comparison (OpenAI vs. Gemini), message objects, and manual state/history management.
+* [02_lcel_and_chat_history.ipynb](file:///Users/vizzdd/Documents/Getting%20Comfortable%20Series/llm-orchestration-schema-validation/02_lcel_and_chat_history.ipynb): LangChain Expression Language (LCEL), custom parsing with `RunnableLambda`, and session-based history management with `RunnableWithMessageHistory`.
+* [03_pydantic_and_tool_calling.ipynb](file:///Users/vizzdd/Documents/Getting%20Comfortable%20Series/llm-orchestration-schema-validation/03_pydantic_and_tool_calling.ipynb): Pydantic models for structured output, local SQLite database tool binding, SMTP email tools, tool loops, and parallel chain execution with `RunnableParallel`.
 
 ## Prerequisites
 To run these notebooks, you will need to install the following dependencies:
