@@ -1,0 +1,29 @@
+{
+  "episode": "04_orchestration_paradigms",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "When comparing LangChain LCEL, LangGraph, CrewAI, and DSPy, which paradigm is explicitly designed for cyclic agent state graphs with conditional branching?",
+      "options": [
+        "A) Raw SDK linear loops",
+        "B) LangGraph",
+        "C) Standard LCEL chains",
+        "D) Pydantic Output Parsers"
+      ],
+      "answer": "B",
+      "explanation": "LangGraph extends LCEL to model multi-actor, cyclic state machines with explicit graph nodes, edges, and state persistence."
+    },
+    {
+      "id": "q2",
+      "question": "What is the core philosophy of DSPy compared to traditional manual prompt engineering?",
+      "options": [
+        "A) DSPy replaces LLMs with decision trees.",
+        "B) DSPy compiles declarative modules and automatically optimizes prompts/few-shot examples using telemetry metrics.",
+        "C) DSPy requires writing longer system prompts manually.",
+        "D) DSPy is strictly limited to single-turn chat completion."
+      ],
+      "answer": "B",
+      "explanation": "DSPy abstracts away string prompting by letting developers program declaratively with modules and optimize prompts algorithmically via teleprompters/optimizers."
+    }
+  ]
+}

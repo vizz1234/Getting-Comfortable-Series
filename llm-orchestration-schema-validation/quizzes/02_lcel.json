@@ -1,0 +1,29 @@
+{
+  "episode": "02_lcel_and_state_management",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is the primary role of the pipe operator (`|`) in LangChain Expression Language (LCEL)?",
+      "options": [
+        "A) It performs bitwise OR operations on model outputs.",
+        "B) It chains Runnable objects together by passing the output of one component as the input to the next.",
+        "C) It executes two chains in parallel.",
+        "D) It opens a database pipe for stream processing."
+      ],
+      "answer": "B",
+      "explanation": "In LCEL, `|` composes Runnables (e.g. `prompt | model | parser`) into a seamless single execution pipeline."
+    },
+    {
+      "id": "q2",
+      "question": "How does `RunnableWithMessageHistory` manage chat state across turns?",
+      "options": [
+        "A) It rewrites the model's weights after every message.",
+        "B) It wraps a chain and automatically loads/saves chat messages from a factory function using a session_id.",
+        "C) It requires you to pass the full history string manually inside every prompt invocation.",
+        "D) It saves all conversations to an external API endpoint."
+      ],
+      "answer": "B",
+      "explanation": "`RunnableWithMessageHistory` wraps an underlying Runnable and manages session-based memory using a chat history factory keyed on session_id."
+    }
+  ]
+}

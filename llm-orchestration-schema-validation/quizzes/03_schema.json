@@ -1,0 +1,29 @@
+{
+  "episode": "03_schema_validation_and_tool_use",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "How does Pydantic guarantee structured output when bound to an LLM via `.with_structured_output(PydanticModel)`?",
+      "options": [
+        "A) It crops the image output to fit a grid.",
+        "B) It passes the model schema via tool calling / JSON mode and validates the returned payload against Pydantic field types.",
+        "C) It forces the LLM to run on a local GPU.",
+        "D) It converts the Python class into a SQL table schema."
+      ],
+      "answer": "B",
+      "explanation": "`.with_structured_output()` leverages native tool-calling or JSON schema modes under the hood to ensure response compliance with the Pydantic class definition."
+    },
+    {
+      "id": "q2",
+      "question": "What is the key advantage of using `@tool` decorators in LangChain tool calling?",
+      "options": [
+        "A) It automatically executes tools without model consent.",
+        "B) It generates OpenAI/Gemini tool schemas from Python docstrings and type hints so models know when and how to call them.",
+        "C) It encrypts tool calls in memory.",
+        "D) It increases API rate limits."
+      ],
+      "answer": "B",
+      "explanation": "The `@tool` decorator inspects function signatures and docstrings to create standard tool definitions that LLMs can invoke."
+    }
+  ]
+}

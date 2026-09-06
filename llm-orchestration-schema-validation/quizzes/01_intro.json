@@ -1,0 +1,29 @@
+{
+  "episode": "01_introduction_to_orchestration",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is the primary architectural difference between directly using provider SDKs (e.g., google-genai or openai) versus using LangChain as an orchestrator?",
+      "options": [
+        "A) Direct SDKs run faster because they bypass Python.",
+        "B) Provider SDKs tie code to a specific API schema, whereas LangChain provides a unified interface and composable abstractions (like LCEL) across models.",
+        "C) Direct SDKs automatically handle multi-turn memory without developer effort.",
+        "D) LangChain replaces the LLM backend with its own local model."
+      ],
+      "answer": "B",
+      "explanation": "LangChain acts as an orchestration layer, abstracting model differences so prompt templates, tool calls, and message structures remain consistent across LLM providers."
+    },
+    {
+      "id": "q2",
+      "question": "In LangChain, how are System, Human, and AI messages represented?",
+      "options": [
+        "A) As raw tuples (role, text).",
+        "B) As SystemMessage, HumanMessage, and AIMessage objects derived from BaseMessage.",
+        "C) As JSON strings with a 'role' key.",
+        "D) As dictionary objects with mandatory timestamp fields."
+      ],
+      "answer": "B",
+      "explanation": "LangChain uses dedicated message classes (SystemMessage, HumanMessage, AIMessage) inheriting from BaseMessage to standardize state across model providers."
+    }
+  ]
+}
