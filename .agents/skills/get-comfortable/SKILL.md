@@ -15,10 +15,10 @@ This skill turns the agent into an **interactive tutor** for the Getting Comfort
 ---
 
 ## Step 0 — Resolve Target Episode
-Read `LEARNING.md` from the workspace root.
+Read `comfort-tracker.md` from the workspace root.
 
 1. **Explicit Argument**: If the learner passed an argument (e.g. `02`, `03`, `schema`, `paradigms`), locate that matching notebook in `llm-orchestration-schema-validation/`.
-2. **Default Continuation**: Find the first episode in `LEARNING.md` whose status is `Do` or `Review`.
+2. **Default Continuation**: Find the first episode in `comfort-tracker.md` whose status is `Do` or `Review`.
 3. **No Active Episode**: If all episodes are `Done`, congratulate the learner and suggest `check-comfort` to test full-series retention.
 
 ---
@@ -57,8 +57,8 @@ Evaluate their responses, report score as `N/M`, and provide detailed explanatio
 
 ---
 
-## Step 4 — Record Progress in `LEARNING.md`
-Update `LEARNING.md`:
+## Step 4 — Record Progress in `comfort-tracker.md`
+Update `comfort-tracker.md`:
 - Append a new row to the **Progress Log** table: Date, Episode, Score, and 1-line key takeaway.
 - If score < 70%: Add the topic to **Review Queue**.
 - If score >= 70%: Update episode status to `Done`.

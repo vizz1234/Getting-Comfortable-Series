@@ -15,7 +15,7 @@ Use this skill when the learner wants to run an **on-demand assessment** or chec
 ---
 
 ## Step 0 — Determine Quiz Target Scope
-Read `LEARNING.md`.
+Read `comfort-tracker.md`.
 
 - **Specified Target**: If learner passed a target (e.g. `01`, `03`, `paradigms`, `lcel`), target questions for that specific episode.
 - **Full Series Review**: If no target is passed, select questions across all completed episodes (`Done` or logged in Progress Log).
@@ -37,9 +37,9 @@ Evaluate each answer in real-time with clear explanations.
 Calculate overall **Comfort Index**:
 - **90% – 100%**: 🌟 **Fully Comfortable** (Mastered)
 - **70% – 89%**: 👍 **Comfortable** (Minor review recommended)
-- **Below 70%**: ⚠️ **Needs Revision** (Topic added to `LEARNING.md` Review Queue)
+- **Below 70%**: ⚠️ **Needs Revision** (Topic added to `comfort-tracker.md` Review Queue)
 
 ---
 
-## Step 3 — Update `LEARNING.md`
-If any topic scores below 70%, append the missed concept to the **Review Queue** in `LEARNING.md` so it gets covered in the next `get-comfortable` session!
+## Step 3 — Update `comfort-tracker.md`
+If any topic scores below 70%, append the missed concept to the **Review Queue** in `comfort-tracker.md` so it gets covered in the next `get-comfortable` session!

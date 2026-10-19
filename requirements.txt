@@ -1,0 +1,22 @@
+# Core Orchestration & LLM Frameworks
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+langchain-community>=0.3.0
+openai>=1.50.0
+google-genai>=0.1.1
+
+# Multi-Paradigm & Agent Frameworks
+langgraph>=0.2.0
+crewai>=0.80.0
+dspy-ai>=2.5.0
+
+# Schema Validation & Data Utilities
+pydantic>=2.9.0
+python-dotenv>=1.0.0
+pandas>=2.2.0
+
+# Interactive Notebook Environment
+jupyter>=1.1.0
+notebook>=7.2.0
+ipykernel>=6.29.0

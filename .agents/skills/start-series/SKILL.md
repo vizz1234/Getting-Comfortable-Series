@@ -1,6 +1,6 @@
 ---
 name: start-series
-description: Initializes or customizes the learning path for Getting Comfortable Series in LEARNING.md.
+description: Initializes or customizes the learning path for Getting Comfortable Series in comfort-tracker.md.
 ---
 
 # start-series Skill
@@ -8,7 +8,7 @@ description: Initializes or customizes the learning path for Getting Comfortable
 Use this skill when the learner wants to initialize, customize, or reset their learning path for the **Getting Comfortable Series**.
 
 ## Step 0 — Read Existing State
-Read `LEARNING.md` from the current directory if present.
+Read `comfort-tracker.md` from the current directory if present.
 
 ## Step 1 — Interactive Series Overview
 Present the current active series and its episodes:
@@ -21,10 +21,10 @@ Present the current active series and its episodes:
 Ask the learner:
 - *"Would you like to start linearly from Episode 01, or jump directly to an episode (e.g. Episode 03 or 04)?"*
 
-## Step 2 — Initialize / Update `LEARNING.md`
-Based on their answer, update the table in `LEARNING.md`:
+## Step 2 — Initialize / Update `comfort-tracker.md`
+Based on their answer, update the table in `comfort-tracker.md`:
 - Set chosen episode(s) to `Do`.
 - Set skipped episode(s) to `Skip` or `Done`.
 
 ## Step 3 — Launch Handoff
-Tell the learner their plan is ready in `LEARNING.md` and invite them to invoke `get-comfortable` to begin the interactive session!
+Tell the learner their plan is ready in `comfort-tracker.md` and invite them to invoke `get-comfortable` to begin the interactive session!
