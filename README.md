@@ -6,38 +6,69 @@
 [![OpenRouter](https://img.shields.io/badge/Provider-OpenRouter-purple.svg)](https://openrouter.ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Bridge the gap between tutorial familiarity and true engineering comfort.**
+> **AI moves fast. Learning it shouldn't feel chaotic.**  
+> *Don't simplify the topic. Simplify the path to understanding it.*
 
-The **Getting Comfortable Series** is an open-source, hands-on curriculum designed to build deep, battle-tested intuition for modern AI Engineering concepts. Instead of superficial copy-paste tutorials, each track delivers rigorous code walkthroughs, real-world patterns, edge-case failure modes, and automated self-assessments.
+The **Getting Comfortable Series** is an open-source, hands-on curriculum built for engineers who want genuine, battle-tested intuition for AI engineering topics.
+
+Instead of superficial "hello world" demos or memorizing framework APIs, this series gives you a structured path from first principles to production tools.
+
+$$\textbf{Learn} \longrightarrow \textbf{Become comfortable} \longrightarrow \textbf{Move on} \longrightarrow \textbf{Return later when needed}$$
+
+---
+
+## 🧭 The Core Learning Progression
+
+Every topic in this series follows a principled 6-stage engineering progression:
+
+$$\text{Understand} \longrightarrow \text{Build} \longrightarrow \text{Break} \longrightarrow \text{Introduce Tools} \longrightarrow \text{Apply} \longrightarrow \text{Revisit}$$
+
+* **1. Understand:** What is the concept? What architectural problem does it solve?
+* **2. Build:** Implement a simple version from first principles where practical.
+* **3. Break:** Discover limitations, edge cases, and where the naive approach crashes.
+* **4. Introduce Tools:** Now introduce the real-world frameworks (LangChain, Pydantic, LangGraph) that solve these exact problems. You understand *why* the tool exists before learning how to use it.
+* **5. Apply:** Build realistic, production-pattern implementations.
+* **6. Revisit:** Open the topic's [`comfort-refresh.md`](./llm-orchestration-schema-validation/comfort-refresh.md) months later to quickly refresh your memory in 3 minutes without re-running code.
+
+---
+
+## 🎯 What "Comfort" Actually Means
+
+A learner finishes a topic able to:
+1. **Explain** the core idea clearly in their own words.
+2. **Understand** the major architectural components and data flows.
+3. **Build** a working implementation from scratch.
+4. **Recognize** common failure modes before they happen in production.
+5. **Understand** why popular tools and frameworks exist rather than memorizing their APIs.
+6. **Read** unfamiliar implementations without feeling lost.
+7. **Come back** months later and quickly refresh the topic with zero friction.
 
 ---
 
 ## 🚀 Active Track: LLM Orchestration & Schema Validation
 
-Explore production-grade LLM orchestration using **LangChain**, schema enforcement with **Pydantic v2**, and model flexibility powered by **OpenRouter** (test across Gemini 2.0 Flash, OpenAI, Claude, Llama 3, and more).
+Explore production-grade LLM orchestration using **LangChain**, schema enforcement with **Pydantic v2**, and model flexibility powered by **OpenRouter** (test across Gemini 2.5 Flash, OpenAI, Claude 3.5, and open-weights models).
 
-| Episode | Focus & Topics | Notebook | Est. Time |
-|---|---|---|:---:|
-| **01** | **Direct SDKs vs Orchestration Architecture**<br>Provider SDK comparison (`google-genai` & `openai` vs LangChain), `BaseMessage` object architecture (`SystemMessage`, `HumanMessage`, `AIMessage`), token tracking, and manual conversation history management. | [01_introduction_to_orchestration.ipynb](./llm-orchestration-schema-validation/01_introduction_to_orchestration.ipynb) | ~1.5h |
-| **02** | **LCEL & Session State Management**<br>LangChain Expression Language (LCEL) pipe composition (`|`), declarative transformations with `RunnableLambda`, `RunnablePassthrough`, output parsing, and persistent multi-turn sessions via `RunnableWithMessageHistory`. | [02_lcel_and_state_management.ipynb](./llm-orchestration-schema-validation/02_lcel_and_state_management.ipynb) | ~2.0h |
-| **03** | **Schema Validation & Tool Execution**<br>Guaranteed structured output via Pydantic (`.with_structured_output`), schema validation guards, real SQLite database querying tools, SMTP simulation, tool-calling loops, and parallel execution with `RunnableParallel`. | [03_schema_validation_and_tool_use.ipynb](./llm-orchestration-schema-validation/03_schema_validation_and_tool_use.ipynb) | ~2.0h |
-| **04** | **The 5-Way Orchestration Bake-Off**<br>Side-by-side comparison of 5 paradigms solving a shared multi-step task (currency exchange + tip calculation): Raw loops, LangChain LCEL, LangGraph state machines, CrewAI role-playing agents, and DSPy declarative modules. | [04_orchestration_paradigms.ipynb](./llm-orchestration-schema-validation/04_orchestration_paradigms.ipynb) | ~3.0h |
+| Episode | Focus & Progression | Notebook | Est. Time | Quick Refresher |
+|---|---|---|:---:|:---:|
+| **01** | **Direct SDKs vs. Orchestration Architecture**<br>Direct provider SDKs ➔ payload divergence & vendor lock-in ➔ unified `BaseMessage` object architecture (`SystemMessage`, `HumanMessage`, `AIMessage`) & OpenRouter model switching. | [01_introduction_to_orchestration.ipynb](./llm-orchestration-schema-validation/01_introduction_to_orchestration.ipynb) | ~1.5h | [`comfort-refresh.md#01`](./llm-orchestration-schema-validation/comfort-refresh.md#01-direct-sdks-vs-orchestration) |
+| **02** | **LCEL & Session State Management**<br>Manual function piping ➔ state spaghetti & concurrent session leaks ➔ LangChain Expression Language (LCEL `\|`), `RunnableLambda`, and session history via `RunnableWithMessageHistory`. | [02_lcel_and_state_management.ipynb](./llm-orchestration-schema-validation/02_lcel_and_state_management.ipynb) | ~2.0h | [`comfort-refresh.md#02`](./llm-orchestration-schema-validation/comfort-refresh.md#02-lcel--state-management) |
+| **03** | **Schema Validation & Tool Execution**<br>Unstructured LLM JSON prompts ➔ markdown fence crashes & missing keys ➔ strict contracts via Pydantic (`.with_structured_output`), SQLite database querying tools, SMTP simulation, and tool-calling loops. | [03_schema_validation_and_tool_use.ipynb](./llm-orchestration-schema-validation/03_schema_validation_and_tool_use.ipynb) | ~2.0h | [`comfort-refresh.md#03`](./llm-orchestration-schema-validation/comfort-refresh.md#03-schema-validation--tool-use) |
+| **04** | **The 5-Way Orchestration Bake-Off**<br>Side-by-side comparison of 5 paradigms solving a shared multi-step task (currency exchange + tip calculation): Raw loops, LangChain LCEL, LangGraph state machines, CrewAI role-playing agents, and DSPy declarative modules. | [04_orchestration_paradigms.ipynb](./llm-orchestration-schema-validation/04_orchestration_paradigms.ipynb) | ~3.0h | [`comfort-refresh.md#04`](./llm-orchestration-schema-validation/comfort-refresh.md#04-orchestration-paradigms-bake-off) |
 
 ---
 
-## 💡 What Makes This Repository Different?
+## ⚡ Zero-Friction Returnability: `comfort-refresh.md`
 
-### 1. Provider-Agnostic with OpenRouter
-Switch between Google Gemini, OpenAI GPT-4o, Anthropic Claude 3.5, or open-weights models simply by updating one environment variable. No refactoring required.
+We believe in **low cognitive friction, not low content volume**. Notebooks go as deep as needed to build genuine intuition.
 
-### 2. Built-in Agentic AI Tutor Skills (`.agents/skills/`)
-This repository comes configured with agentic AI tutoring skills ready to use in modern AI coding environments (e.g. Google Antigravity, Cursor, Claude Code):
-- **`get-comfortable`**: Step-by-step interactive tutor that guides you through the notebooks, tests your intuition with code prediction questions, and quizzes you at each milestone.
-- **`check-comfort`**: Runs an on-demand retention assessment across covered concepts and calculates your *Comfort Index*.
-- **`start-series`**: Initializes and tailors your personal learning track inside [`comfort-tracker.md`](./comfort-tracker.md).
+When you return months later, you shouldn't have to re-execute 40 cells to remember how a pattern works. Each track includes a standalone:
 
-### 3. Concrete Self-Assessment Quizzes
-Every episode includes machine-readable and human-friendly quiz banks under [`llm-orchestration-schema-validation/quizzes/`](./llm-orchestration-schema-validation/quizzes/) with questions, answer keys, and deep conceptual explanations.
+👉 **[`comfort-refresh.md`](./llm-orchestration-schema-validation/comfort-refresh.md)**
+* 30-second mental models and architecture diagrams
+* Copy-paste ready canonical code recipes
+* Common failure modes and 60-second diagnostic fixes
+* Architecture decision matrices ("When should I use X vs Y?")
 
 ---
 
@@ -70,32 +101,31 @@ MODEL_NAME=google/gemini-2.5-flash  # optional, default
 ### 4. Launch Notebooks
 ```bash
 jupyter lab
-# Or: jupyter notebook
 ```
-Navigate to `llm-orchestration-schema-validation/` and open `01_introduction_to_orchestration.ipynb` to get started!
+Navigate to [`llm-orchestration-schema-validation/`](./llm-orchestration-schema-validation/) and open `01_introduction_to_orchestration.ipynb`!
 
 ---
 
-## 📈 Learning Path & Progress Tracker
+## 🤖 Optional AI Pair-Programmer Skills
 
-Use [`comfort-tracker.md`](./comfort-tracker.md) to record your progress, log quiz scores, and track topics added to your review queue.
+The notebooks are 100% self-contained. However, if you are working inside an AI-enabled IDE (Google Antigravity, Cursor, Claude Code), this repository includes companion skills in `.agents/skills/`:
+- **`comfort-refresh`**: Rapid 90-second mental model, canonical code recipe, and failure-mode recap on any topic when returning weeks later.
+- **`get-comfortable`**: An interactive step-by-step tutor that walks through notebooks with code prediction challenges.
+- **`check-comfort`**: Quick retention and diagnostic drill across covered topics to calculate your Comfort Index.
+- **`start-series`**: Initializes your personal track tracker in [`comfort-tracker.md`](./comfort-tracker.md).
+
+These tools are silent sidekicks designed to support your learning, never to get in your way.
 
 ---
 
 ## 🗺️ Upcoming Tracks
 
-- [ ] **Vector Embeddings, RAG & Hybrid Retrieval** (Dense vs Sparse, Re-ranking, Chunking trade-offs)
-- [ ] **Agentic Memory & State Compaction** (Episodic buffers, Semantic summarization, Checkpointing)
-- [ ] **Evals & Guardrails** (LLM-as-a-judge, Latency & Cost benchmarking, Output validation pipelines)
-
----
-
-## 🤝 Contributing & Feedback
-
-Contributions, suggestions, and additional exercises are welcome! Feel free to open an issue or submit a pull request.
+- [ ] **Vector Embeddings, RAG & Hybrid Retrieval** (Dense vs. Sparse, Cross-encoder re-ranking, Semantic chunking)
+- [ ] **Agentic Memory & State Compaction** (Episodic buffers, Summary trees, Checkpointing)
+- [ ] **Evals & Guardrails** (LLM-as-a-judge, Synthetics, Latency/Cost profiling, Output filters)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details (or open an issue).
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
