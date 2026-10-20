@@ -64,7 +64,7 @@ cp .env.example .env
 Edit `.env`:
 ```ini
 OPENROUTER_API_KEY=your-openrouter-api-key-here
-MODEL_NAME=google/gemini-2.0-flash-001  # optional, default
+MODEL_NAME=google/gemini-2.5-flash  # optional, default
 ```
 
 ### 4. Launch Notebooks

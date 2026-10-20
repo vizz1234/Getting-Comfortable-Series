@@ -33,7 +33,7 @@ pip install langchain langchain-openai langchain-community langgraph crewai dspy
 You will also need to set up your OpenRouter API key in `.env` (copied from `.env.example`):
 ```bash
 OPENROUTER_API_KEY=your-openrouter-api-key-here
-MODEL_NAME=google/gemini-2.0-flash-001  # optional, default
+MODEL_NAME=google/gemini-2.5-flash  # optional, default
 ```
 
 
