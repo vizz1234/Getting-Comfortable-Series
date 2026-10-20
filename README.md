@@ -4,12 +4,11 @@
 [![LangChain](https://img.shields.io/badge/LangChain-v0.3+-green.svg)](https://python.langchain.com/)
 [![Pydantic v2](https://img.shields.io/badge/Pydantic-v2-e92063.svg)](https://docs.pydantic.dev/)
 [![OpenRouter](https://img.shields.io/badge/Provider-OpenRouter-purple.svg)](https://openrouter.ai/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **AI moves fast. Learning it shouldn't feel chaotic.**  
 > *Don't simplify the topic. Simplify the path to understanding it.*
 
-The **Getting Comfortable Series** is an open-source, hands-on curriculum built for engineers who want genuine, battle-tested intuition for AI engineering topics.
+The **Getting Comfortable Series** is a hands-on curriculum built for engineers who want genuine, battle-tested intuition for AI engineering topics.
 
 Instead of superficial "hello world" demos or memorizing framework APIs, this series gives you a structured path from first principles to production tools.
 
@@ -124,8 +123,3 @@ These tools are silent sidekicks designed to support your learning, never to get
 - [ ] **Agentic Memory & State Compaction** (Episodic buffers, Summary trees, Checkpointing)
 - [ ] **Evals & Guardrails** (LLM-as-a-judge, Synthetics, Latency/Cost profiling, Output filters)
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
