@@ -8,7 +8,7 @@
 > **AI moves fast. Learning it shouldn't feel chaotic.**  
 > *Don't simplify the topic. Simplify the path to understanding it.*
 
-The **Getting Comfortable Series** is a hands-on curriculum built for engineers who want genuine, battle-tested intuition for AI engineering topics.
+The **Getting Comfortable Series** is a hands-on curriculum built for engineers who want genuine intuition for AI engineering topics.
 
 Instead of superficial "hello world" demos or memorizing framework APIs, this series gives you a structured path from first principles to production tools.
 
