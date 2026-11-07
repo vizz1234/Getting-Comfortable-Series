@@ -1,0 +1,16 @@
+# Core Machine Learning & Fine-Tuning
+torch>=2.2.0
+transformers>=4.45.0
+peft>=0.13.0
+datasets>=2.20.0
+trl>=0.11.0
+accelerate>=0.34.0
+
+# Scientific & Visual Foundations
+numpy>=1.24.0
+matplotlib>=3.8.0
+
+# Interactive Notebook Environment
+jupyter>=1.1.0
+ipykernel>=6.29.0
+

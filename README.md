@@ -44,7 +44,7 @@ A learner finishes a topic able to:
 
 ---
 
-## 🚀 Active Track: LLM Orchestration & Schema Validation
+## 🚀 Track 01: LLM Orchestration & Schema Validation
 
 Explore production-grade LLM orchestration using **LangChain**, schema enforcement with **Pydantic v2**, and model flexibility powered by **OpenRouter** (test across Gemini 2.5 Flash, OpenAI, Claude 3.5, and open-weights models).
 
@@ -54,6 +54,19 @@ Explore production-grade LLM orchestration using **LangChain**, schema enforceme
 | **02** | **LCEL & Session State Management**<br>Manual function piping ➔ state spaghetti & concurrent session leaks ➔ LangChain Expression Language (LCEL `\|`), `RunnableLambda`, and session history via `RunnableWithMessageHistory`. | [02_lcel_and_state_management.ipynb](./llm-orchestration-schema-validation/02_lcel_and_state_management.ipynb) | ~2.0h | [`comfort-refresh.md#02`](./llm-orchestration-schema-validation/comfort-refresh.md#02-lcel--state-management) |
 | **03** | **Schema Validation & Tool Execution**<br>Unstructured LLM JSON prompts ➔ markdown fence crashes & missing keys ➔ strict contracts via Pydantic (`.with_structured_output`), SQLite database querying tools, SMTP simulation, and tool-calling loops. | [03_schema_validation_and_tool_use.ipynb](./llm-orchestration-schema-validation/03_schema_validation_and_tool_use.ipynb) | ~2.0h | [`comfort-refresh.md#03`](./llm-orchestration-schema-validation/comfort-refresh.md#03-schema-validation--tool-use) |
 | **04** | **The 5-Way Orchestration Bake-Off**<br>Side-by-side comparison of 5 paradigms solving a shared multi-step task (currency exchange + tip calculation): Raw loops, LangChain LCEL, LangGraph state machines, CrewAI role-playing agents, and DSPy declarative modules. | [04_orchestration_paradigms.ipynb](./llm-orchestration-schema-validation/04_orchestration_paradigms.ipynb) | ~3.0h | [`comfort-refresh.md#04`](./llm-orchestration-schema-validation/comfort-refresh.md#04-orchestration-paradigms-bake-off) |
+
+---
+
+## ⚡ Track 02: LLM Fine-Tuning, PEFT & Alignment
+
+Demystify parameter-efficient fine-tuning (PEFT), low-rank adaptation (LoRA / QLoRA), and preference alignment (DPO) from first-principles linear algebra to production SLM deployment.
+
+| Episode | Focus & Progression | Notebook | Est. Time | Quick Refresher |
+|---|---|---|:---:|:---:|
+| **01** | **Foundations: Matrix Rank & LoRA From Scratch**<br>Linear layer mechanics ($y=xW^T$) ➔ visual rank intuition ($3 \times 3$ toy matrices) ➔ low-rank factorization ($B \times A$) ➔ build pure PyTorch `LoRALinear` ➔ verify gradient isolation & parity with Hugging Face `peft`. | [01_lora_foundations_and_math.ipynb](./llm-fine-tuning/01_lora_foundations_and_math.ipynb) | ~1.5h | [`comfort-refresh.md#01`](./llm-fine-tuning/comfort-refresh.md#1-the-core-lora-equation) |
+| **02** | **Data Engineering, Chat Templates & Loss Masking**<br>Raw conversational datasets ➔ Jinja2 chat templates ➔ **The Prompt Parrot Bug** (training without masking) ➔ enforce completion-only loss masking (`-100` tokens) with `DataCollatorForCompletionOnlyLM`. | [02_data_prep_masking_and_sft.ipynb](./llm-fine-tuning/02_data_prep_masking_and_sft.ipynb) | ~2.0h | [`comfort-refresh.md#02`](./llm-fine-tuning/comfort-refresh.md#recipe-3-completion-only-loss-masking-the-1-bug-fix) |
+| **03** | **Production SFT, QLoRA & Hyperparameter Sweeps**<br>Train `Qwen2.5-0.5B` on an SRE incident dispatch task using `trl.SFTTrainer` ➔ 4-bit NF4 quantization mechanics (QLoRA) ➔ rank ($r$) and learning rate sweeps ➔ probe catastrophic forgetting on unrelated logic. | [03_production_sft_and_qlora.ipynb](./llm-fine-tuning/03_production_sft_and_qlora.ipynb) | ~2.5h | [`comfort-refresh.md#03`](./llm-fine-tuning/comfort-refresh.md#recipe-2-hugging-face-peft-production-setup) |
+| **04** | **Preference Alignment (DPO) & Local Serving (GGUF)**<br>Why SFT is not enough ➔ Direct Preference Optimization (DPO) vs. RLHF/GRPO ➔ train with chosen/rejected pairs ➔ fuse adapters (`merge_and_unload`) ➔ export to GGUF format for local serving via Ollama. | [04_preference_dpo_and_serving.ipynb](./llm-fine-tuning/04_preference_dpo_and_serving.ipynb) | ~2.0h | [`comfort-refresh.md#04`](./llm-fine-tuning/comfort-refresh.md#recipe-1-pure-pytorch-loralinear-layer) |
 
 ---
 
