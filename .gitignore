@@ -10,3 +10,4 @@ reference_folder/
 venv/
 .venv/
 env/
+.vscode/
